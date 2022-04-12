@@ -14,8 +14,8 @@ var userRouter = require('./routes/user');
 var patientRouter = require('./routes/patient');
 
 var app = express();
-
-
+require('dotenv').config({ path: __dirname + '/.env' })
+mongoose.connect(process.env['CONNECTION_STRING'], { useNewUrlParser: true, useUnifiedTopology: true });
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
