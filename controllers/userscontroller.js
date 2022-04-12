@@ -10,7 +10,7 @@ exports.get_users = function (req, res) {
         }
     })
 }
-
+//Create
 exports.get_create_users = function (req, res) {
     res.render('user/create');
 }

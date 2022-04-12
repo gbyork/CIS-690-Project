@@ -9,3 +9,5 @@ const userSchema = new Schema({
 });
 const User = mongoose.model('User', userSchema);
 module.exports = User;
+
+//Set up for what attributes patient have that will need to be typed into form when creating

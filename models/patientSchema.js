@@ -19,3 +19,4 @@ const patientSchema = new Schema({
 const Patient = mongoose.model('Patient', patientSchema);
 module.exports = Patient;
 
+//Set up for what attributes patient have that will need to be typed into form when creating
