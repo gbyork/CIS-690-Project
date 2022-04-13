@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<% include ../partials/navbar %>
+    <% include ../partials/header %>
+
+        <body>
+
+            <a class="btn btn-success mt-2 mb-3" href="/user/create">+ Create</a>
+            <table id="UserTable" class="table table-bordered table-striped">
+                <thead>
+                    <tr>
+                        <td>First Name</td>
+                        <td>Last Name</td>
+                        <td>Email</td>
+                        <td>Password</td>
+                        <td>Role</td>
+                    </tr>
+                </thead>
+
+                <% for (let x=0; x < User.length; x++) { %>
+                    <tr>
+                        <td>
+                            <%= User[x].FirstName %>
+                        </td>
+                        <td>
+                            <%= User[x].LastName %>
+                        </td>
+                        <td>
+                            <%= User[x].Email %>
+                        </td>
+                        <td>
+                            <%= User[x].Password %>
+                        </td>
+                        <td>
+                            <%= User[x].Role %>
+                        </td>
+                        <td>
+                            <a href="/user/update?id=<%= User[x]._id%>">Update</a>
+                            <a href="/user/delete?id=<%= User[x]._id%>" onclick="confirmdelete()">Delete</a>
+                        </td>
+                    </tr>
+                    <% } %>
+            </table>
+
+
+
+
+
+
+            <script>
+                function confirmdelete() {
+                    confirm('Do you want to delete the entry?')
+                }
+            </script>
+
+        </body>
+
+</html>

@@ -6,13 +6,17 @@ exports.get_users = function (req, res) {
             console.log(err);
         } else {
             console.log(data);
-            
+            res.render("./user/users", { User: data });
         }
     })
 }
 //Create
 exports.get_create_users = function (req, res) {
     res.render('user/create');
+}
+
+exports.get_completed = function (req, res) {
+    res.render('user/creation');
 }
 
 exports.post_users = function (req, res) {
@@ -35,3 +39,44 @@ exports.post_users = function (req, res) {
         }
     });
 }
+
+exports.delete_user = function (req, res) {
+    User.findOneAndDelete({ _id: req.query.id }, function (err) {
+        if(err) {
+            console.log(err);
+        } else {
+            res.redirect("/user");
+        }
+    });
+};
+
+exports.get_update_user = function (req, res) {
+    User.findOne({ _id: req.query.id }, function (err, UserData) {
+        if(err) {
+            console.log(err);
+        } else {
+            res.render("user/update", { data: UserData });
+        }
+    });
+};
+
+
+
+exports.post_update_user = function (req, res) {
+
+    const UpdatedData = {
+        FirstName: req.body.FirstName,
+        LastName: req.body.LastName,
+        Email: req.body.Email,
+        Password: req.body.Password,
+        Role: req.body.Role
+    }
+
+    User.findOneAndUpdate({ _id: req.body.id }, UpdatedData, function (err) {
+        if (err) {
+            console.log(err);
+        } else {
+            res.redirect("/user");
+        }
+    });
+};

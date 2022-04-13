@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<% include ../partials/navbar %>
+    <% include ../partials/header %>
+
+        <body>
+            <div class="container">
+                <h1>Contact</h1>
+                <div class="container">
+
+                    <form method="POST" action="/user/update">
+                        <input type="hidden" name="id" value="<%=data._id%>" />
+                        <input type="text" name="FirstName" placeholder="First name" />
+                        <br>
+                        <input type="text" name="LastName" placeholder="Last name" />
+                        <br>
+                        <input type="text" name="Email" placeholder="Email" />
+                        <br>
+                        <input type="text" name="Password" placeholder="Password" />
+                        <br>
+                        <input type="text" name="Role" placeholder="Role" />
+
+                        <input type="submit" value="Update" />
+                    </form>
+                </div>
+            </div>
+
+
+
+
+        </body>
+
+</html>

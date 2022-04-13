@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<% include ../partials/navbar %>
+    <% include ../partials/header %>
+        <body>
+
+            <a class="btn btn-success mt-2 mb-3" href="/patient/create">+ Create</a>
+            <table id="PatientTable" class="table table-bordered table-striped">
+                <thead>
+                    <tr>
+                        <td>Creator ID</td>
+                        <td>Creator Name</td>
+                        <td>First Name</td>
+                        <td>Last Name</td>
+                        <td>Birthdate</td>
+                        <td>Zipcode</td>
+                        <td>State</td>
+                        <td>Phone Number</td>
+                        <td>Create Date</td>
+                        <td>Insurance Type</td>
+                        <td>Test Type</td>
+                        <td>Doctor Service</td>
+                        <td>Lab Name</td>
+                        <td>Sample Status</td>
+                    </tr>
+                </thead>
+
+                <% for (let x=0; x < Patient.length; x++) { %>
+                    <tr>
+                        <td>
+                            <%= Patient[x].CreatorID %>
+                        </td>
+                        <td>
+                            <%= Patient[x].CreatorName %>
+                        </td>
+                        <td>
+                            <%= Patient[x].FirstName %>
+                        </td>
+                        <td>
+                            <%= Patient[x].LastName %>
+                        </td>
+                        <td>
+                            <%= Patient[x].Birthdate %>
+                        </td>
+                        <td>
+                            <%= Patient[x].Zipcode %>
+                        </td>
+                        <td>
+                            <%= Patient[x].State %>
+                        </td>
+                        <td>
+                            <%= Patient[x].PhoneNumber %>
+                        </td>
+                        <td>
+                            <%= Patient[x].CreateDate %>
+                        </td>
+                        <td>
+                            <%= Patient[x].InsuranceType %>
+                        </td>
+                        <td>
+                            <%= Patient[x].TestType %>
+                        </td>
+                        <td>
+                            <%= Patient[x].DoctorService %>
+                        </td>
+                        <td>
+                            <%= Patient[x].LabName %>
+                        </td>
+                        <td>
+                            <%= Patient[x].SampleStatus %>
+                        </td>
+                        <td>
+                            <a href="/Patient/update?id=<%= Patient[x]._id%>">Update</a>
+                            <a href="/Patient/delete?id=<%= Patient[x]._id%>"
+                                onclick="confirmdelete()">Delete</a>
+                        </td>
+                    </tr>
+                    <% } %>
+            </table>
+
+
+
+
+
+
+            <script>
+                function confirmdelete() {
+                    confirm('Do you want to delete the entry?')
+                }
+            </script>
+
+        </body>
+
+</html>
