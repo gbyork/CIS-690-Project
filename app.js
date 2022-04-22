@@ -9,7 +9,7 @@ var indexRouter = require('./routes/index');
 var loginRouter = require('./routes/login');
 var dashboardRouter = require('./routes/dashboard');
 var statusRouter = require('./routes/status');
-var accountRouter = require('./routes/account');
+
 var userRouter = require('./routes/user');
 var patientRouter = require('./routes/patient');
 
@@ -60,7 +60,6 @@ app.use('/', indexRouter);
 app.use('/login', loginRouter);
 app.use('/dashboard', dashboardRouter);
 app.use('/status', statusRouter);
-app.use('/account', accountRouter);
 app.use('/user', userRouter);
 app.use('/patient',patientRouter);
 

@@ -4,7 +4,7 @@ function ensureAuthenticated(req, res, next) {
         return next();
 
     // if they aren't redirect them to the home page
-    res.redirect('/account/login');
+    res.redirect('/login/index');
 }
 
 function ensureIsAdmin(req, res, next) {
@@ -17,7 +17,7 @@ function ensureIsAdmin(req, res, next) {
         res.status(401);
         res.send('You are not authorized to access this page');
     } else {
-        res.redirect('/account/login');
+        res.redirect('/login/index');
     }
 }
 
@@ -31,7 +31,7 @@ function ensureIsAdminOrQualityControl(req, res, next) {
         res.status(401);
         res.send('You are not authorized to access this page');
     } else {
-        res.redirect('/account/login');
+        res.redirect('/login/index');
     }
 }
 

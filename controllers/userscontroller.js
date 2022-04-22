@@ -25,10 +25,9 @@ exports.post_users = function (req, res) {
         FirstName: req.body.FirstName,
         LastName: req.body.LastName,
         Email: req.body.Email,
-        Password:req.body.Password,
         Role: req.body.Role
     });
-
+    newUser.Password = newUser.generateHash(req.body.Password);
     newUser.save(function (err) {
         if (err) {
             // handle error
@@ -68,10 +67,12 @@ exports.post_update_user = function (req, res) {
         FirstName: req.body.FirstName,
         LastName: req.body.LastName,
         Email: req.body.Email,
-        Password: req.body.Password,
         Role: req.body.Role
     }
-
+    if (req.body.Password) {
+        let temp = new User();
+        UpdatedData.Password = temp.generateHash(req.body.Password);
+      }
     User.findOneAndUpdate({ _id: req.body.id }, UpdatedData, function (err) {
         if (err) {
             console.log(err);

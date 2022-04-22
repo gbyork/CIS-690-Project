@@ -12,12 +12,17 @@
           <br>
           <input type="text" name="LastName" placeholder="Last name"/>
           <br>
-          <input type="text" name="Email" placeholder="Email"/>
+          <input type="email" name="Email" placeholder="Email"/>
           <br>
-          <input type="text" name="Password" placeholder="Password"/>
+          <input type="password" name="Password" placeholder="Password"/>
           <br>
-          <input type="text" name="Role" placeholder="Role"/>
-          
+          <!-- <input type="text" name="Role" placeholder="Role"/> -->
+          <select name="Role">
+            <option value=""></option>
+            <option value="Admin">Admin</option>
+            <option value="Data Entry Specialist">Data Entry Specialist</option>
+            <option value="Quality Control">Quality Control</option>
+          </select>
           <input type="submit" value="Create"/>
         </form>
       </div>
