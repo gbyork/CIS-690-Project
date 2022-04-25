@@ -22,7 +22,7 @@ module.exports = function (passport) {
     },
         function (req, email, password, done) {
             // find a user whose email is the same as the forms email
-            User.findOne({ 'email': email }, function (err, user) {
+            User.findOne({ 'Email': email }, function (err, user) {
                 if (err)
                     return done(err);
                 if (!user)
