@@ -15,7 +15,7 @@ function ensureIsAdmin(req, res, next) {
     // if they aren't redirect them to the home page
     if (req.isAuthenticated()) {
         res.status(401);
-        res.send('You are not authorized to access this page' + res.locals.user.Role);
+        res.send('You are not authorized to access this page');
     } else {
         res.redirect('/login');
     }
