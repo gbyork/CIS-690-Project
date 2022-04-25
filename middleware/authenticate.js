@@ -9,11 +9,11 @@ function ensureAuthenticated(req, res, next) {
 
 function ensureIsAdmin(req, res, next) {
     // if user is authenticated in the session, carry on 
-    if (req.isAuthenticated() && res.locals.user.role === 'Admin')
+    if (req.isAuthenticated() && res.locals.user.Role === 'Admin')
         return next();
 
     // if they aren't redirect them to the home page
-    if (req.isAuthenticated) {
+    if (req.isAuthenticated()) {
         res.status(401);
         res.send('You are not authorized to access this page');
     } else {
@@ -23,7 +23,7 @@ function ensureIsAdmin(req, res, next) {
 
 function ensureIsAdminOrQualityControl(req, res, next) {
     // if user is authenticated in the session, carry on 
-    if (req.isAuthenticated() && (res.locals.user.role === 'Admin' || res.locals.user.role === 'Quality Control'))
+    if (req.isAuthenticated() && (res.locals.user.Role === 'Admin' || res.locals.user.Role === 'Quality Control'))
         return next();
 
     // if they aren't redirect them to the home page

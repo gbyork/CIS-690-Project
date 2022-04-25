@@ -5,10 +5,10 @@ const authMiddleware = require('../middleware/authenticate');
 const userscontroller = require('../controllers/userscontroller');
 
 
-router.get('/', userscontroller.get_users);
+router.get('/', authMiddleware.ensureIsAdmin, userscontroller.get_users);
 
-router.get('/create', userscontroller.get_create_users);
-router.post('/create', userscontroller.post_users)
+router.get('/create', authMiddleware.ensureIsAdmin, userscontroller.get_create_users);
+router.post('/create', authMiddleware.ensureIsAdmin, userscontroller.post_users)
 
 router.get('/update', authMiddleware.ensureIsAdmin, userscontroller.get_update_user);
 router.post('/update', authMiddleware.ensureIsAdmin, userscontroller.post_update_user);
