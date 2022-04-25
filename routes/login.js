@@ -2,8 +2,8 @@ let passport = require('passport');
 var express = require('express');
 var router = express.Router();
 
-router.get('/login', function (req, res) {
-    res.render('../views/login/index', { message: req.flash('loginMessage') });
+router.get('/', function (req, res,next) {
+    res.render('./login/index', { message: req.flash('loginMessage') });
 });
 
 
