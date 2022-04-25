@@ -16,8 +16,8 @@ module.exports = function (passport) {
     // =================LOCAL LOGIN ======================================
 
     passport.use('local-login', new LocalStrategy({
-        usernameField: 'email',
-        passwordField: 'password',
+        usernameField: 'Email',
+        passwordField: 'Password',
         passReqToCallback: true
     },
         function (req, email, password, done) {
