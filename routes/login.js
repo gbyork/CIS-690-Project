@@ -15,7 +15,7 @@ router.get('/logout', function (req, res) {
 
 
 
-router.post('/login', passport.authenticate('local-login', {
+router.post('/', passport.authenticate('local-login', {
     successRedirect: '/', //redirect to the home page
     failureRedirect: '/login', // redirect back to the signup page if there is an error
     failureFlash: true // allow flash messages
