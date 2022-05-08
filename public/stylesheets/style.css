@@ -6,3 +6,12 @@ body {
 a {
   color: #00B7FF;
 }
+
+.UpdatePage {
+  height: 30px;
+  width: auto;
+}
+
+.Gap {
+  width: 300px;
+}

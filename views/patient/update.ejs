@@ -4,55 +4,178 @@
     <% include ../partials/header %>
 
         <body>
-            <div class="container">
-                <h1>Contact</h1>
+            <div class="container mt-5">
+                <h1>Update Patient</h1>
                 <div class="container">
-
-                    <form method="POST" action="/patient/update">
+                    <form method="POST" action="/patient/update" class="form-group">
                         <input type="hidden" name="id" value="<%=data._id%>" />
-                        <input type="text" name="CreatorID" placeholder="Creator ID" />
-                        <br>
-                        <br>
-                        <input type="text" name="CreatorName" placeholder="Creator name" />
-                        <br>
-                        <br>
-                        <input type="text" name="FirstName" placeholder="First name" />
-                        <br>
-                        <br>
-                        <input type="text" name="LastName" placeholder="Last name" />
-                        <br>
-                        <br>
-                        <input type="text" name="Birthdate" placeholder="Birth Date" />
-                        <br>
-                        <br>
-                        <input type="text" name="Zipcode" placeholder="Zip code" />
-                        <br>
-                        <br>
-                        <input type="text" name="State" placeholder="State" />
-                        <br>
-                        <br>
-                        <input type="text" name="PhoneNumber" placeholder="Phone number" />
-                        <br>
-                        <br>
-                        <input type="text" name="CreateDate" placeholder="Creation Date" />
-                        <br>
-                        <br>
-                        <input type="text" name="InsuranceType" placeholder="Insurance type" />
-                        <br>
-                        <br>
-                        <input type="text" name="TestType" placeholder="Test type" />
-                        <br>
-                        <br>
-                        <input type="text" name="DoctorService" placeholder="Doctor service" />
-                        <br>
-                        <br>
-                        <input type="text" name="LabName" placeholder="Lab name" />
-                        <br>
-                        <br>
-                        <input type="text" name="SampleStatus" placeholder="Sample status" />
-                        <br>
-                        <br>
-                        <input type="submit" value="Update" />
+                        <table>
+                            <tr>
+                                <th class="UpdatePage">
+                                </th>
+                                <th class="UpdatePage Gap">
+                                </th>
+                                <th class="UpdatePage Gap">
+                                </th>
+                                <th class="UpdatePage">
+                                </th>
+                                <th class="UpdatePage Gap">
+                                </th>
+                            </tr>
+                            <tr>
+                                <td class="UpdatePage">
+                                    <span>Creator ID: </span>
+                                </td>
+                                <td class="UpdatePage">
+                                    <input class="form-control" type="text" name="CreatorID" placeholder="Creator ID"
+                                        value="<%=data.CreatorID%>" />
+                                </td>
+                                </td>
+                                <td class="UpdatePage">
+                                <td class="UpdatePage">
+                                    <span>Creator Name: </span>
+                                </td>
+                                <td class="UpdatePage">
+                                    <input class="form-control" type="text" name="CreatorName"
+                                        placeholder="Creator name" value="<%=data.CreatorName%>" />
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>&nbsp</td>
+                            </tr>
+                            <tr>
+                                <td class="UpdatePage">
+                                    <span>First Name: </span>
+                                </td>
+                                <td class="UpdatePage">
+                                    <input class="form-control" type="text" name="FirstName" placeholder="First name"
+                                        value="<%=data.FirstName%>" />
+                                </td>
+                                </td>
+                                <td class="UpdatePage">
+                                <td class="UpdatePage">
+                                    <span>Last Name: </span>
+                                </td>
+                                <td class="UpdatePage">
+                                    <input class="form-control" type="text" name="LastName" placeholder="Last name"
+                                        value="<%=data.LastName%>" />
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>&nbsp</td>
+                            </tr>
+                            <tr>
+                                <td class="UpdatePage">
+                                    <span>Birth Date: </span>
+                                </td>
+                                <td class="UpdatePage">
+                                    <input class="form-control" type="text" name="Birthdate" placeholder="Birth Date"
+                                        value="<%=data.BirthDate%>" />
+                                </td>
+                                </td>
+                                <td class="UpdatePage">
+                                <td class="UpdatePage">
+                                    <span>Zipcode: </span>
+                                </td>
+                                <td class="UpdatePage">
+                                    <input class="form-control" type="text" name="Zipcode" placeholder="Zip code"
+                                        value="<%=data.Zipcode%>" />
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>&nbsp</td>
+                            </tr>
+                            <tr>
+                                <td class="UpdatePage">
+                                    <span>State: </span>
+                                </td>
+                                <td class="UpdatePage">
+                                    <input class="form-control" type="text" name="State" placeholder="State"
+                                        value="<%=data.State%>" />
+                                </td>
+                                </td>
+                                <td class="UpdatePage">
+                                <td class="UpdatePage">
+                                    <span>Phone Number: </span>
+                                </td>
+                                <td class="UpdatePage">
+                                    <input class="form-control" type="text" name="PhoneNumber"
+                                        placeholder="Phone number" value="<%=data.PhoneNumber%>" />
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>&nbsp</td>
+                            </tr>
+                            <tr>
+                                <td class="UpdatePage">
+                                    <span>Create Date: </span>
+                                </td>
+                                <td class="UpdatePage">
+                                    <input class="form-control" type="text" name="CreateDate"
+                                        placeholder="Creation Date" value="<%=data.CreateDate%>" />
+                                </td>
+                                </td>
+                                <td class="UpdatePage">
+                                <td class="UpdatePage">
+                                    <span>Insurance Type: </span>
+                                </td>
+                                <td class="UpdatePage">
+                                    <input class="form-control" type="text" name="InsuranceType"
+                                        placeholder="Insurance type" value="<%=data.InsuranceType%>" />
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>&nbsp</td>
+                            </tr>
+                            <tr>
+                                <td class="UpdatePage">
+                                    <span>Test Type: </span>
+                                </td>
+                                <td class="UpdatePage">
+                                    <input class="form-control" type="text" name="TestType" placeholder="Test type"
+                                        value="<%=data.TestType%>" />
+                                </td>
+                                </td>
+                                <td class="UpdatePage">
+                                <td class="UpdatePage">
+                                    <span>Doctor Service: </span>
+                                </td>
+                                <td class="UpdatePage">
+                                    <input class="form-control" type="text" name="DoctorService"
+                                        placeholder="Doctor service" value="<%=data.DoctorService%>" />
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>&nbsp</td>
+                            </tr>
+                            <tr>
+                                <td class="UpdatePage">
+                                    <span>Lab Name: </span>
+                                </td>
+                                <td class="UpdatePage">
+                                    <input class="form-control" type="text" name="LabName" placeholder="Lab name"
+                                        value="<%=data.LabName%>" />
+                                </td>
+                                </td>
+                                <td class="UpdatePage">
+                                <td class="UpdatePage">
+                                    <span>Sample Status: </span>
+                                </td>
+                                <td class="UpdatePage">
+                                    <input class="form-control" type="text" name="SampleStatus"
+                                        placeholder="Sample status" value="<%=data.SampleStatus%>" />
+                                </td>
+                                <td class="UpdatePage">
+                            </tr>
+                            <tr>
+                                <td>&nbsp</td>
+                            </tr>
+                            <tr>
+                                <td class="UpdatePage">
+                                    <input type="submit" class="btn btn-primary" value="Update" />
+                                </td>
+                            </tr>
+                        </table>
                     </form>
                 </div>
             </div>
