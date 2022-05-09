@@ -71,8 +71,8 @@
                             <%= Patient[x].SampleStatus %>
                         </td>
                         <td>
-                            <a href="/Patient/update?id=<%= Patient[x]._id%>">Update</a>
-                            <a href="/Patient/delete?id=<%= Patient[x]._id%>" onclick="confirmdelete()">Delete</a>
+                            <a href="/Patient/update?id=<%= Patient[x]._id%>" class="btn btn-primary">Update</a>
+                            <a href="/Patient/delete?id=<%= Patient[x]._id%>" onclick="confirmdelete()" class="btn btn-primary">Delete</a>
                         </td>
                     </tr>
                     <% } %>
