@@ -1,6 +1,8 @@
 body {
   padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  background: #cccccc;
+  /*background-image: url("/Doctor.jpg");*/
 }
 
 a {
@@ -14,4 +16,32 @@ a {
 
 .Gap {
   width: 300px;
+}
+
+h1 {
+  border-bottom: 5px solid red;
+}
+/*
+body { 
+  background: url("/Doctor.jpg") no-repeat center center fixed;
+  background-size: cover;
+}
+*/
+td {
+  background-color: grey;
+  color: white;
+}
+
+p {
+  font-size: 20px;
+  color: black;
+}
+
+img {
+  height: auto;
+  width: 1000px;
+  margin-left: auto;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }

@@ -8,17 +8,17 @@
                 <h1>Contact</h1>
                 <div class="container">
 
-                    <form method="POST" action="/user/update">
-                        <input type="hidden" name="id" value="<%=data._id%>" />
-                        <input type="text" name="FirstName" placeholder="First name" value="<%=data.FirstName%>" />
+                    <form method="POST" action="/user/update" class="form-group">
+                        <input class="form-control" type="hidden" name="id" value="<%=data._id%>" />
+                        <input class="form-control" type="text" name="FirstName" placeholder="First name" value="<%=data.FirstName%>" />
                         <br>
-                        <input type="text" name="LastName" placeholder="Last name" value="<%=data.LastName%>" />
+                        <input class="form-control" type="text" name="LastName" placeholder="Last name" value="<%=data.LastName%>" />
                         <br>
-                        <input type="email" name="Email" placeholder="Email" value="<%=data.Email%>" />
+                        <input class="form-control" type="email" name="Email" placeholder="Email" value="<%=data.Email%>" />
                         <br>
-                        <input type="password" name="Password" placeholder="Password" />
+                        <input class="form-control" type="password" name="Password" placeholder="Password" />
                         <br>
-                        <select required type="text" name="Role">
+                        <select class="form-control" required type="text" name="Role">
                             
                             <% if (data.role === 'Data Entry Specialist') { %>
                                 <option selected>Data Entry Specialist</option>
@@ -35,8 +35,9 @@
                             <% } else { %>
                                 <option>Admin</option>
                             <% } %>                             
-                        </select>   
-                        <input type="submit" value="Update" />
+                        </select>
+                        <br>
+                        <input type="submit" class="btn btn-primary" value="Update" />
                     </form>
                 </div>
             </div>

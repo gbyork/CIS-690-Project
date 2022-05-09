@@ -7,23 +7,23 @@
     <h1>Contact</h1>
     <div class="container">
         
-        <form method="POST" action="/user/create">
-          <input type="text" name="FirstName" placeholder="First name"/>
+        <form method="POST" action="/user/create" class="form-group">
+          <input class="form-control" type="text" name="FirstName" placeholder="First name"/>
           <br>
-          <input type="text" name="LastName" placeholder="Last name"/>
+          <input class="form-control" type="text" name="LastName" placeholder="Last name"/>
           <br>
-          <input type="email" name="Email" placeholder="Email"/>
+          <input class="form-control" type="email" name="Email" placeholder="Email"/>
           <br>
-          <input type="password" name="Password" placeholder="Password"/>
+          <input class="form-control" type="password" name="Password" placeholder="Password"/>
           <br>
-          <!-- <input type="text" name="Role" placeholder="Role"/> -->
-          <select name="Role">
+          <select name="Role" class="form-control">
             <option value=""></option>
             <option value="Admin">Admin</option>
             <option value="Data Entry Specialist">Data Entry Specialist</option>
             <option value="Quality Control">Quality Control</option>
           </select>
-          <input type="submit" value="Create"/>
+          <br>
+          <input class="btn btn-primary" type="submit" value="Create"/>
         </form>
       </div>
 </div>
